@@ -1,88 +1,392 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
 <head>
-  <meta charset='utf-8'>
+  <meta charset="utf-8"/>
+  <meta name="viewport" content="width=1024"/>
+  <meta name="apple-mobile-web-app-capable" content="yes"/>
+  <title>Be Nice To Your Web Designer!</title>
+  <meta name="description"
+        content="How to work effectively with your web designer? Avoid templating engines, decouple your code from HTML using OO CSS and use the original HTML design as the true 'template'"/>
+  <meta name="author" content="Enrique Amodeo Rubio"/>
 
-  <title>eamodeorubio/be_nice_to_your_web_designer @ GitHub</title>
-
-  <style type="text/css">
-    body {
-      margin-top: 1.0em;
-      background-color: #54b208;
-      font-family: Helvetica, Arial, FreeSans, san-serif;
-      color: #ffffff;
-    }
-    #container {
-      margin: 0 auto;
-      width: 700px;
-    }
-    h1 { font-size: 3.8em; color: #ab4df7; margin-bottom: 3px; }
-    h1 .small { font-size: 0.4em; }
-    h1 a { text-decoration: none }
-    h2 { font-size: 1.5em; color: #ab4df7; }
-    h3 { text-align: center; color: #ab4df7; }
-    a { color: #ab4df7; }
-    .description { font-size: 1.2em; margin-bottom: 30px; margin-top: 30px; font-style: italic;}
-    .download { float: right; }
-    pre { background: #000; color: #fff; padding: 15px;}
-    hr { border: 0; width: 80%; border-bottom: 1px solid #aaa}
-    .footer { text-align:center; padding-top:30px; font-style: italic; }
-  </style>
+  <link
+      href="http://fonts.googleapis.com/css?family=Open+Sans:regular,semibold,italic,italicsemibold|PT+Sans:400,700,400italic,700italic|PT+Serif:400,700,400italic,700italic"
+      rel="stylesheet"/>
+  <link href="css/impress-basic.css" rel="stylesheet"/>
+  <link href="css/press.css" rel="stylesheet"/>
 </head>
+<body class="impress-not-supported">
+<section class="fallback-message">
+  <p>Your browser <b>doesn't support the features required</b> by impress.js, so you are presented with a simplified
+    version of this presentation.</p>
 
-<body>
-  <a href="https://github.com/eamodeorubio/be_nice_to_your_web_designer"><img style="position: absolute; top: 0; right: 0; border: 0;" src="http://s3.amazonaws.com/github/ribbons/forkme_right_darkblue_121621.png" alt="Fork me on GitHub" /></a>
+  <p>For the best experience please use the latest <b>Chrome</b>, <b>Safari</b> or <b>Firefox</b> browser.</p>
+</section>
 
-  <div id="container">
+<section id="impress">
+<header class="step slide" id="cover" data-x="0" data-y="0">
+  <hgroup>
+    <h1>Be nice to your web designer!</h1>
 
-    <div class="download">
-      <a href="https://github.com/eamodeorubio/be_nice_to_your_web_designer/zipball/master">
-        <img border="0" width="90" src="https://github.com/images/modules/download/zip.png"></a>
-      <a href="https://github.com/eamodeorubio/be_nice_to_your_web_designer/tarball/master">
-        <img border="0" width="90" src="https://github.com/images/modules/download/tar.png"></a>
-    </div>
+    <h2>colaborate as an effective team</h2>
 
-    <h1><a href="https://github.com/eamodeorubio/be_nice_to_your_web_designer">be_nice_to_your_web_designer</a>
-      <span class="small">by <a href="https://github.com/eamodeorubio">eamodeorubio</a></span></h1>
+    <h2>with <strong>OO CSS</strong></h2>
 
-    <div class="description">
-      Slides from my talk "Be Nice to your Web Designer (with a bit of OO CSS & a good software architecture)"
-    </div>
+    <h2>and a <strong>good software architecture</strong></h2>
+  </hgroup>
+  <footer class="license">
+    <a rel="license" href="http://creativecommons.org/licenses/by-nc-sa/3.0/">
+      <img alt="Creative Commons License" style="border-width:0"
+           src="http://i.creativecommons.org/l/by-nc-sa/3.0/88x31.png"/></a>
 
-    
+    <a rel="me" href="https://twitter.com/eamodeorubio">@eamodeorubio</a></footer>
+</header>
+<article class="step slide" id="about-me" data-x="950" data-y="0">
+  <h1 class="title">Enrique Amodeo</h1>
+  <img src="img/EnriqueAmodeo.jpg" class="portrait">
+  <ul class="bullets portrait-around">
+    <li>In the business since 2000</li>
+    <li>Software developer</li>
+    <li>Consulting & Mentoring</li>
+    <li>Javascript/AJAX/RIA developer since 2006</li>
+    <li>Doing agile & lean since 2005 (I like it!)</li>
+    <li>Mail me at <a href="mailto:eamodeorubio@gmail.com">eamodeorubio@gmail.com</a></li>
+    <li>Read my rants at <a href="http://eamodeorubio.wordpress.com/">http://eamodeorubio.wordpress.com/</a></li>
+    <li>Follow me! <a href="http://twitter.com/eamodeorubio">@eamodeorubio</a></li>
+  </ul>
+  <footer class="license">
+    <a rel="license" href="http://creativecommons.org/licenses/by-nc-sa/3.0/">
+      <img alt="Creative Commons License" style="border-width:0"
+           src="http://i.creativecommons.org/l/by-nc-sa/3.0/88x31.png"/></a>
 
-    
+    <a rel="me" href="https://twitter.com/eamodeorubio">@eamodeorubio</a></footer>
+</article>
+<article class="step slide" id="faster-cooler" data-x="950" data-y="-838" data-rotate="-90">
+  <h1 class="title">A good web application is not enough!</h1>
+  <ul class="bullets">
+    <li class="even">A <strong>lot</strong> of web applications out there!</li>
+    <li class="odd">You need to <strong>beat</strong> your rivals</li>
+    <li class="even">You need to develop <strong>faster</strong> than them</li>
+    <li class="odd">Your app need to be <strong>cooler</strong> than theirs</li>
+  </ul>
+  <footer class="license">
+    <a rel="license" href="http://creativecommons.org/licenses/by-nc-sa/3.0/">
+      <img alt="Creative Commons License" style="border-width:0"
+           src="http://i.creativecommons.org/l/by-nc-sa/3.0/88x31.png"/></a>
 
-    
+    <a rel="me" href="https://twitter.com/eamodeorubio">@eamodeorubio</a></footer>
+</article>
+<article class="step slide" id="easy" data-x="447" data-y="-1532" data-scale="0.5" data-rotate="-90">
+  <ul class="bullets center">
+    <li class="big even">Don't worry</li>
+    <li class="big odd">I'll hire the <strong>best</strong> team out there</li>
+  </ul>
+  <footer class="license">
+    <a rel="license" href="http://creativecommons.org/licenses/by-nc-sa/3.0/">
+      <img alt="Creative Commons License" style="border-width:0"
+           src="http://i.creativecommons.org/l/by-nc-sa/3.0/88x31.png"/></a>
 
-    
+    <a rel="me" href="https://twitter.com/eamodeorubio">@eamodeorubio</a></footer>
+</article>
+<article class="step slide" id="the-designer" data-x="826" data-y="-1532" data-scale="0.5" data-rotate="-90">
+  <ul class="bullets">
+    <li class="big even">A top rated web designer!</li>
+    <figure class="img_inline">
+      <img src="img/designer.jpg">
+      <figcaption>http://www.flickr.com/photos/adactio/4741524985/sizes/l/in/photostream/</figcaption>
+    </figure>
+    <li class="odd">...that knows the last html5/css3 tricks</li>
+  </ul>
+</article>
+<article class="step slide" id="the-developers" data-x="1195" data-y="-1532" data-rotate="-90" data-scale="0.5">
+  <ul class="bullets">
+    <li class="big even">The best code developers !</li>
+    <figure class="img_inline">
+      <img src="img/moss_roy.jpg">
+      <figcaption>IT Crowd season 3 episode 2: http://www.youtube.com/watch?v=f27IqVo5-Oc</figcaption>
+    </figure>
+    <li class="odd">They know some HTML & CSS too !</li>
+  </ul>
+</article>
+<article class="step slide" id="agile-stuff" data-x="1564" data-y="-1532" data-rotate="-90" data-scale="0.5">
+  <ul class="bullets">
+    <li class="big even">Put them to work together...</li>
+    <figure class="img_inline">
+      <img src="img/kanban.jpg">
+      <figcaption>http://www.flickr.com/photos/talios/3726484344/sizes/l/in/photostream/</figcaption>
+    </figure>
+    <li class="odd">...using that agile stuff</li>
+  </ul>
+</article>
+<article class="step slide" id="the-problem" data-x="1900">
+  <h1 class="title">Problems ahead !</h1>
+  <ul class="bullets" style="margin-top: 3em">
+    <li class="even">They have a <strong>communication problem</strong></li>
+    <li class="odd">Different <strong>skills</strong></li>
+    <li class="even">Different <strong>languages</strong></li>
+    <li class="odd">Different <strong>visions</strong> of the world</li>
+  </ul>
+  <footer class="license">
+    <a rel="license" href="http://creativecommons.org/licenses/by-nc-sa/3.0/">
+      <img alt="Creative Commons License" style="border-width:0"
+           src="http://i.creativecommons.org/l/by-nc-sa/3.0/88x31.png"/></a>
 
-    
-      <h2>Authors</h2>
-      <p>Enrique J. Amodeo Rubio (eamodeorubio@gmail.com)<br/>      </p>
-    
+    <a rel="me" href="https://twitter.com/eamodeorubio">@eamodeorubio</a></footer>
+</article>
+<article class="step slide" id="designgeneer" data-x="2613" data-scale="0.5">
+  <h1 class="title">The mythical Designgeneer</h1>
+  <ul class="bullets">
+    <li class="big even">Ok, I've changed my mind</li>
+    <li class="big odd">I'll hire a <strong>Designgeneer</strong>!</li>
+    <li class="big even">An army of one!</li>
+  </ul>
+  <footer class="license">
+    <a rel="license" href="http://creativecommons.org/licenses/by-nc-sa/3.0/">
+      <img alt="Creative Commons License" style="border-width:0"
+           src="http://i.creativecommons.org/l/by-nc-sa/3.0/88x31.png"/></a>
 
-    
-      <h2>Contact</h2>
-      <p>Enrique J. Amodeo Rubio (eamodeorubio@gmail.com)<br/>      </p>
-    
+    <a rel="me" href="https://twitter.com/eamodeorubio">@eamodeorubio</a></footer>
+</article>
+<article class="step slide" id="superman" data-x="2613" data-y="369" data-scale="0.5">
+  <ul class="bullets">
+    <li class="even">Ok, perhaps this guy does not exists</li>
+    <figure class="img_inline">
+      <img src="img/superman.jpg" style="max-width: 100%; margin: auto;">
+      <figcaption>http://www.flickr.com/photos/bnorthern/218867621/sizes/l/in/photostream/</figcaption>
+    </figure>
+    <li class="odd">Or I can't afford him</li>
+  </ul>
+</article>
+<article class="step slide" id="not_quite_superman" data-x="2613" data-y="738" data-scale="0.5">
+  <ul class="bullets">
+    <li class="even">Candidates were more like this:</li>
+    <figure class="img_inline">
+      <img src="img/not_quite_superman.jpg">
+      <figcaption>http://www.flickr.com/photos/hajagosb/6264762098/sizes/l/in/photostream/</figcaption>
+    </figure>
+    <li class="odd">Better return to my first idea!</li>
+  </ul>
+</article>
+<article class="step slide" id="classic-workflow" data-x="2613" data-y="1107" data-scale="0.5">
+  <h1 class="title">Better a team working...<strong>together??</strong></h1>
+  <ul class="bullets">
+    <li class="even">A classic workflow</li>
+    <img src="img/workflow.svg" class="img_inline">
+    <li class="odd">Not very agile!</li>
+  </ul>
+  <footer class="license">
+    <a rel="license" href="http://creativecommons.org/licenses/by-nc-sa/3.0/">
+      <img alt="Creative Commons License" style="border-width:0"
+           src="http://i.creativecommons.org/l/by-nc-sa/3.0/88x31.png"/></a>
 
-    <h2>Download</h2>
-    <p>
-      You can download this project in either
-      <a href="https://github.com/eamodeorubio/be_nice_to_your_web_designer/zipball/master">zip</a> or
-      <a href="https://github.com/eamodeorubio/be_nice_to_your_web_designer/tarball/master">tar formats.
-    </p>
-    <p>You can also clone the project with <a href="http://git-scm.com">Git</a>
-      by running:
-      <pre>$ git clone git://github.com/eamodeorubio/be_nice_to_your_web_designer</pre>
-    </p>
+    <a rel="me" href="https://twitter.com/eamodeorubio">@eamodeorubio</a></footer>
+</article>
+<article class="step slide" id="classic-workflow-problems" data-x="2613" data-y="1476" data-scale="0.5">
+  <h1 class="title">Problems with traditional workflow</h1>
+  <ul class="bullets">
+    <li>More misunderstandings, hence more ceremony</li>
+    <li>Changes in UI are stuck in development phase</li>
+    <li>Development is blocked by UI design</li>
+    <li>Error prone</li>
+    <li>Double maintenance</li>
+    <li>Slow feedback & development cycle!</li>
+  </ul>
+  <footer class="license">
+    <a rel="license" href="http://creativecommons.org/licenses/by-nc-sa/3.0/">
+      <img alt="Creative Commons License" style="border-width:0"
+           src="http://i.creativecommons.org/l/by-nc-sa/3.0/88x31.png"/></a>
 
-    <div class="footer">
-      get the source code on GitHub : <a href="https://github.com/eamodeorubio/be_nice_to_your_web_designer">eamodeorubio/be_nice_to_your_web_designer</a>
-    </div>
+    <a rel="me" href="https://twitter.com/eamodeorubio">@eamodeorubio</a></footer>
+</article>
+<article class="step slide" id="decouple" data-x="950" data-y="838" data-rotate="90">
+  <h1 class="title">Decouple code from details in UI</h1>
+  <ul class="bullets">
+    <li>Change code only when user interaction changes</li>
+    <li>App code should be HTML & CSS agnostic</li>
+    <li>UI Design and Development in parallel</li>
+    <li>Less interference</li>
+  </ul>
+  <footer class="license">
+    <a rel="license" href="http://creativecommons.org/licenses/by-nc-sa/3.0/">
+      <img alt="Creative Commons License" style="border-width:0"
+           src="http://i.creativecommons.org/l/by-nc-sa/3.0/88x31.png"/></a>
 
-  </div>
+    <a rel="me" href="https://twitter.com/eamodeorubio">@eamodeorubio</a></footer>
+</article>
+<article class="step slide" id="the-contract" data-x="78" data-y="1532" data-scale="0.5" data-rotate="90">
+  <h1 class="title">But need to agree on user interaction</h1>
+  <ul class="bullets">
+    <li>Work <strong>together</strong> on a <strong>disposable</strong> prototype</li>
+    <li>Could be a <strong>paper</strong> one</li>
+    <li>Or an <strong>HTML/JS</strong> one</li>
+    <li>No CSS or aesthetics involved</li>
+    <li>No software quality intended</li>
+  </ul>
+  <footer class="license">
+    <a rel="license" href="http://creativecommons.org/licenses/by-nc-sa/3.0/">
+      <img alt="Creative Commons License" style="border-width:0"
+           src="http://i.creativecommons.org/l/by-nc-sa/3.0/88x31.png"/></a>
 
+    <a rel="me" href="https://twitter.com/eamodeorubio">@eamodeorubio</a></footer>
+</article>
+<article class="step slide" id="oo-css" data-x="447" data-y="1532" data-scale="0.5" data-rotate="90">
+  <h1 class="title">Define a <strong>neutral</strong> contract!</h1>
+  <ul class="bullets">
+    <li>Build a contract on <strong>common ground</strong></li>
+    <li>A good set of common <strong>key selectors</strong></li>
+    <li>Use <strong>OO CSS</strong></li>
+    <li>See Nicole Sullivan (@stubbornella) for more details</li>
+    <li><a href="http://www.slideshare.net/eamodeorubio/oo-css-12157062">Si quieres una presentación en en español puedes ver la mía</a></li>
+  </ul>
+  <footer class="license">
+    <a rel="license" href="http://creativecommons.org/licenses/by-nc-sa/3.0/">
+      <img alt="Creative Commons License" style="border-width:0"
+           src="http://i.creativecommons.org/l/by-nc-sa/3.0/88x31.png"/></a>
+
+    <a rel="me" href="https://twitter.com/eamodeorubio">@eamodeorubio</a></footer>
+</article>
+<article class="step slide" id="oo-css-summary" data-x="816" data-y="1532" data-scale="0.5" data-rotate="90">
+  <h1 class="title">OO CSS... in short!</h1>
+  <ul class="bullets">
+    <li>Semantic CSS selectors</li>
+    <li>Decoupled from HTML</li>
+    <li>Reusable in several context</li>
+    <li>Extensible</li>
+    <li>Could use small snippets of reusable HTML</li>
+  </ul>
+  <footer class="license">
+    <a rel="license" href="http://creativecommons.org/licenses/by-nc-sa/3.0/">
+      <img alt="Creative Commons License" style="border-width:0"
+           src="http://i.creativecommons.org/l/by-nc-sa/3.0/88x31.png"/></a>
+
+    <a rel="me" href="https://twitter.com/eamodeorubio">@eamodeorubio</a></footer>
+</article>
+<article class="step slide" id="the-architecture" data-x="1185" data-y="1532" data-scale="0.5" data-rotate="90">
+  <h1 class="title">UI proof software architecture</h1>
+  <img src="img/architecture.svg" style="width: 100%;position: absolute;top:60px;left: 40px;">
+  <footer class="license">
+    <a rel="license" href="http://creativecommons.org/licenses/by-nc-sa/3.0/">
+      <img alt="Creative Commons License" style="border-width:0"
+           src="http://i.creativecommons.org/l/by-nc-sa/3.0/88x31.png"/></a>
+
+    <a rel="me" href="https://twitter.com/eamodeorubio">@eamodeorubio</a></footer>
+</article>
+<article class="step slide" id="templates" data-x="1544" data-y="1532" data-scale="0.5" data-rotate="90">
+  <h1 class="title">Templates are blocking our workflow!</h1>
+  <ul class="bullets">
+    <li>The design need to be transformed to templates</li>
+    <li>Double maintenance</li>
+    <li>Designer and developers work on different artifacts</li>
+    <li>Can you do pair programming with your designer?</li>
+  </ul>
+  <footer class="license">
+    <a rel="license" href="http://creativecommons.org/licenses/by-nc-sa/3.0/">
+      <img alt="Creative Commons License" style="border-width:0"
+           src="http://i.creativecommons.org/l/by-nc-sa/3.0/88x31.png"/></a>
+
+    <a rel="me" href="https://twitter.com/eamodeorubio">@eamodeorubio</a></footer>
+</article>
+<article class="step slide" id="no-templates" data-x="1923" data-y="1532" data-scale="0.5" data-rotate="90">
+  <h1 class="title">Templates are a solution from the past</h1>
+  <ul class="bullets">
+    <li class="even">When HTML was generated in servers...</li>
+    <li class="odd">...and servers didn't understand HTML DOM</li>
+    <li class="even">We have better technology now!</li>
+  </ul>
+  <footer class="license">
+    <a rel="license" href="http://creativecommons.org/licenses/by-nc-sa/3.0/">
+      <img alt="Creative Commons License" style="border-width:0"
+           src="http://i.creativecommons.org/l/by-nc-sa/3.0/88x31.png"/></a>
+
+    <a rel="me" href="https://twitter.com/eamodeorubio">@eamodeorubio</a></footer>
+</article>
+<article class="step slide" id="ko" data-x="1923" data-y="1863" data-scale="0.25">
+  <h1 class="title">Knockout.js</h1>
+  <ul class="bullets">
+    <li class="even">Annotates the HTML with microdata</li>
+    <li class="even">Easier for the designer can ignore microdata</li>
+    <li class="even">And designer can ignore microdata</li>
+    <li class="odd">...but is not so easy with lists!</li>
+  </ul>
+  <footer class="license">
+    <a rel="license" href="http://creativecommons.org/licenses/by-nc-sa/3.0/">
+      <img alt="Creative Commons License" style="border-width:0"
+           src="http://i.creativecommons.org/l/by-nc-sa/3.0/88x31.png"/></a>
+
+    <a rel="me" href="https://twitter.com/eamodeorubio">@eamodeorubio</a></footer>
+</article>
+<article class="step slide" id="examples" data-x="1923" data-y="2047" data-scale="0.25">
+  <h1 class="title">HTML animation</h1>
+  <ul class="bullets">
+    <li class="even">Use the original HTML</li>
+    <li class="even">Use CSS selectors and jQuery/Zepto</li>
+    <li class="odd">...to animate the HTML</li>
+  </ul>
+  <footer class="license">
+    <a rel="license" href="http://creativecommons.org/licenses/by-nc-sa/3.0/">
+      <img alt="Creative Commons License" style="border-width:0"
+           src="http://i.creativecommons.org/l/by-nc-sa/3.0/88x31.png"/></a>
+
+    <a rel="me" href="https://twitter.com/eamodeorubio">@eamodeorubio</a></footer>
+</article>
+
+<article class="step slide" id="animate" data-x="1923" data-y="2232" data-scale="0.25">
+  <h1 class="title">HTML Animation steps</h1>
+  <ul class="bullets">
+    <li>Fetch HTML examples using selectors</li>
+    <li>Hide/remove the original HTML</li>
+    <li>Make a clone for each model instance</li>
+    <li>Insert the clone into the document</li>
+    <li>Modify the new DOM with the model data</li>
+  </ul>
+  <footer class="license">
+    <a rel="license" href="http://creativecommons.org/licenses/by-nc-sa/3.0/">
+      <img alt="Creative Commons License" style="border-width:0"
+           src="http://i.creativecommons.org/l/by-nc-sa/3.0/88x31.png"/></a>
+
+    <a rel="me" href="https://twitter.com/eamodeorubio">@eamodeorubio</a></footer>
+</article>
+<article class="step slide" id="benefits" data-x="1923" data-y="2416" data-scale="0.25">
+  <h1 class="title">HTML Animation benefits</h1>
+  <ul class="bullets">
+    <li class="even">The original HTML is enriched not send to thrash</li>
+    <li class="odd">Everybody can work on the same artifact</li>
+    <li class="even">They are a team now!</li>
+  </ul>
+  <footer class="license">
+    <a rel="license" href="http://creativecommons.org/licenses/by-nc-sa/3.0/">
+      <img alt="Creative Commons License" style="border-width:0"
+           src="http://i.creativecommons.org/l/by-nc-sa/3.0/88x31.png"/></a>
+
+    <a rel="me" href="https://twitter.com/eamodeorubio">@eamodeorubio</a></footer>
+</article>
+<article class="step slide" id="code" data-rotate="-90" data-x="-859">
+  <hgroup>
+    <h1><p class="even">Inside the infamous</p><strong><p class="odd">"To Do List"</strong></p></h1>
+    <h2>With <strong>jQuery/Zepto</strong></h2>
+
+    <h2>And with <strong>knockout.js</strong></h2>
+
+    <h3><a href="https://github.com/eamodeorubio/explore-the-todo-list-app">(https://github.com/eamodeorubio/explore-the-todo-list-app)</a>
+    </h3>
+  </hgroup>
+  <footer class="license">
+    <a rel="license" href="http://creativecommons.org/licenses/by-nc-sa/3.0/">
+      <img alt="Creative Commons License" style="border-width:0"
+           src="http://i.creativecommons.org/l/by-nc-sa/3.0/88x31.png"/></a>
+
+    <a rel="me" href="https://twitter.com/eamodeorubio">@eamodeorubio</a></footer>
+</article>
+<article id="overview" class="step overview" data-x="900" data-y="500" data-scale="6" data-z="100">
+  <hgroup>
+    <h1>Thank you !!</h1>
+
+    <h2>Q & A ??</h2>
+  </hgroup>
+</article>
+</section>
+
+<script src="js/impress.js"></script>
+<script>impress();</script>
 </body>
 </html>
