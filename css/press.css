@@ -58,6 +58,10 @@ a:hover {
   opacity: 0.1;
 }
 
+.impress-not-supported .step:not(.active), .impress-not-supported .step:not(.active) img {
+  opacity: 1;
+}
+
 .overview:not(.active) {
   opacity: 0;
   display: none;
