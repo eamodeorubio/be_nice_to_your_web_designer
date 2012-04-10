@@ -154,7 +154,8 @@ a:hover {
   left:-2px;
 }
 
-.license a[rel=me] {
+.license a.twitter {
+  cursor:pointer;
   width: 100%;
   font-size: 0.61em;
   font-weight: bold;
